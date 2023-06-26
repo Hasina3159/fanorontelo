@@ -1,0 +1,258 @@
+.modal{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(255, 246, 246, 0.8);
+    font-size: 1cm;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(88, 88, 88);
+    display: none;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+.menu{
+    height: 111%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: rgba(255, 246, 246, 0.8);
+    font-size: 1cm;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 100;
+    color: rgb(88, 88, 88);
+    top: -50px;
+    left: 0;
+    z-index: 10012;
+}
+
+.btn{
+    color: rgb(167, 167, 167);
+    font-size: 0.5cm;
+    border:none;
+    cursor: pointer;
+    background-color: #0f0024;
+    border-radius: 5px;
+    padding: 0.3cm 0.5cm;
+    margin-top: 1cm;
+
+}
+
+.shadow{
+    width: 150px; height: 20px;
+    top: 205px;
+    border-radius: 100%;
+    position: absolute;
+    animation: down ease-in-out infinite 1s;
+    z-index: -1;
+
+}
+
+#hanomboka{
+    animation: up ease-in-out infinite 1s;
+}
+
+@keyframes up {
+    0%{
+        margin-bottom: 0px;
+    }
+    50%{
+        margin-bottom: 20px;
+    }
+}
+
+@keyframes down {
+    0%{
+        box-shadow: 0px 100px 3px rgba(0, 0, 0, 0.8);
+    }
+    50%{
+        box-shadow: 0px 100px 5px rgba(0, 0, 0, 0.3);
+    }
+    100%{
+        box-shadow: 0px 100px 3px rgba(0, 0, 0, 0.8);
+        
+    }
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    top: 0;left: 0;
+    z-index: 1000;
+}
+body{
+    background: #F5EE9E;
+}
+
+.start{
+    display: flex;
+    width: 330px;
+    height: 50px;
+    background: white;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.row{
+    width: 330px;
+    height: 110px;
+    display: flex;
+    padding: 3px;
+    justify-items: center;
+    justify-content: center;
+}
+.col{
+    background: white;
+    color: rgb(56, 56, 56);
+    height: 100px;
+    width: 100px;
+    border-radius: 250px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    font-weight: 1000;
+
+}
+.board{
+    margin-top: 10px;
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+    /*box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    border-radius: 30px;
+    background-color: #01FDF6;*/
+
+}
+
+.lines{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+}
+
+.line{
+    width: 250px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+}
+
+.line8{
+    top: 290px;
+}
+
+.line7{
+    top: 175px;
+}
+
+.line6{
+    top: 55px;
+}
+
+.line5{
+    width: 25px;
+    height: 60%;
+    top:100px;
+}
+
+.line4{
+    width: 25px;
+    height: 60%;
+    top:100px;left: 55px;
+}
+
+.line3{
+    width: 25px;
+    height: 60%;
+    top:100px;left: 275px;
+}
+
+.line2{
+    width: 25px;
+    height: 100%;
+    top:10px;left: 160px;
+    transform: rotate(45deg);
+}
+
+.line1{
+    width: 25px;
+    height: 100%;
+    top:10px;left: 170px;
+    transform: rotate(-45deg);
+}
+
+.piece{
+    border: none;
+    position: absolute;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    
+}
+
+.piece:focus{
+    border: 1px solid aqua;
+}
+
+.col:hover{
+    cursor: pointer;
+}
+
+.piece.un{
+    background: rgb(78, 78, 78);
+
+}
+.piece.un:hover{
+    background-color: black;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+.piece.deux{
+    background: #78b7ff;
+
+}
+.piece.deux:hover{
+    background: #578fcf;
+}
+
+.piece.transition{
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+}
+.piece.transition:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.now{
+    border: 3px solid greenyellow;
+}
